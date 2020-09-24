@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30320.27
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "shedule", "shedule\shedule.csproj", "{50EC6A53-FD68-441F-A336-56EEA3139A41}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{50EC6A53-FD68-441F-A336-56EEA3139A41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50EC6A53-FD68-441F-A336-56EEA3139A41}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50EC6A53-FD68-441F-A336-56EEA3139A41}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50EC6A53-FD68-441F-A336-56EEA3139A41}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C0FF4288-EA16-42EA-814C-7D0F57343E04}
+	EndGlobalSection
+EndGlobal
