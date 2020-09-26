@@ -14,22 +14,9 @@ namespace shedule.Core
     /// </summary>
     interface ISchedule
     {
-        /// <summary>
-        /// Сущность расписания, для кого его составляем
-        /// </summary>
-        string Entity { get; set; }
-
-        /// <summary>
-        /// Сущность тех, кто будет пользоваться этим расписанием
-        /// </summary>
-        string PeopleGroup { get; set; }
-
-        /// <summary>
-        /// Место определения Entity и Group
-        /// </summary>
-        string Room { get; set; }
-
-        //TODO: Заменить таблицы на Entity, PeopleGroup, Room. Добавить таблицу Union для соединения Id трёх таблиц
+        string Entity { get; }
+        string EntityControl { get; }
+        string Info { get; }
         void Set();
     }
 }
