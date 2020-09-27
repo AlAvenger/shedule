@@ -1,10 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using schedule.DataBase.Models;
+using shedule.DataBase.String;
+using System.Data.Linq;
 
-namespace shedule.Core
+namespace schedule.Core.Interfaces
 {
     /// <summary>
     /// Базовый интерфейс который должен реализовывать любое расписание
@@ -14,9 +12,31 @@ namespace shedule.Core
     /// </summary>
     interface ISchedule
     {
-        string Entity { get; }
-        string EntityControl { get; }
-        string Info { get; }
-        void Set();
+        /// <summary>
+        /// Таблица Entitycontrol
+        /// </summary>
+        Table<EntityControl> EntityControl { get; set; }
+        /// <summary>
+        /// Таблица Data
+        /// </summary>
+        Table<Data> Data { get; set; }
+        /// <summary>
+        /// Таблица Group
+        /// </summary>
+        Table<PeopleGroup> Group { get; set; }
+        /// <summary>
+        /// Таблица Room
+        /// </summary>
+        Table<Room> Room { get; set; }
+        /// <summary>
+        /// Таблица Schedule
+        /// </summary>
+        Table<Schedule> Schedule { get; set; }
+
+        /// <summary>
+        /// Возвращает массив объектов
+        /// </summary>
+        /// <returns>Массив объектов Table<T></returns>
+        object[] ReturnSchedule();
     }
 }

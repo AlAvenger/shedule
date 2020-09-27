@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using schedule.DataBase.Models;
+using System.Data.Linq;
 
-namespace shedule.Core.Interfaces
+namespace schedule.Core.Interfaces
 {
     /// <summary>
     /// Базовый интерфейс который должен реализовывать любое расписание
@@ -14,7 +11,23 @@ namespace shedule.Core.Interfaces
     /// </summary>
     interface IScheduler
     {
-        
-        ISchedule CreateSchedule(string entity, string peopleGroup, string Room);
+       
+        /// <summary>
+        /// Таблица Entity
+        /// </summary>
+        Table<Entity> Entity { get; set; }
+
+        /// <summary>
+        /// Создание расписания, формирование в нём таблиц.
+        /// </summary>
+        /// <param name="entityControl"></param>
+        /// <param name="data"></param>
+        /// <param name="group"></param>
+        /// <param name="room"></param>
+        /// <param name="Schedule"></param>
+        /// <returns></returns>
+        ISchedule CreateSchedule(Table<EntityControl> entityControl, Table<Data> data, Table<PeopleGroup> group, Table<Room> room, Table<Schedule> Schedule);
+
+
     }
 }
