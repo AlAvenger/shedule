@@ -1,5 +1,4 @@
 ﻿using schedule.DataBase.Models;
-using shedule.DataBase.String;
 using System.Data.Linq;
 
 namespace schedule.Core.Interfaces
@@ -10,7 +9,7 @@ namespace schedule.Core.Interfaces
     /// необходимо реализовать пару интерфейсов:
     /// ISchedule(этот) - для типа расписания. IScheduler - для составления расписания
     /// </summary>
-    interface ISchedule
+    interface ISchedule 
     {
         /// <summary>
         /// Таблица Entitycontrol
@@ -31,12 +30,13 @@ namespace schedule.Core.Interfaces
         /// <summary>
         /// Таблица Schedule
         /// </summary>
-        Table<Schedule> Schedule { get; set; }
+        Table<Queue> Queue { get; set; }
 
         /// <summary>
         /// Возвращает массив объектов
         /// </summary>
-        /// <returns>Массив объектов Table<T></returns>
-        object[] ReturnSchedule();
+        /// <returns>Массив объектов</returns>
+        object[] ReturnItems();
+        object[] ReturnSchedule(Table<Schedule> Schedule);
     }
 }

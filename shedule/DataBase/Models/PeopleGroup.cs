@@ -12,6 +12,6 @@ namespace schedule.DataBase.Models
         public string GroupName { get; set; }
 
         [Column]
-        public int ControlId { get; set; }
+        public int? ControlId { get; set; }
     }
 }

@@ -2,12 +2,12 @@
 
 namespace schedule.DataBase.Models
 {
-    [Table(Name = "Data")]
 
+    [Table(Name = "Data")]
     class Data
     {
         [Column(IsDbGenerated = true, IsPrimaryKey = true)]
-        public int? DataId { get; set; }
+        public int DataId { get; set; }
 
         [Column]
         public string Text { get; set; }

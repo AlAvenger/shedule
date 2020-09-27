@@ -9,12 +9,18 @@ namespace schedule.DataBase.Models
         public int Id { get; set; }
 
         [Column]
-        public int? DataId { get; set; }
+        public string DataText { get; set; }
 
         [Column]
-        public int? ControlId { get; set; }
+        public string ControlName { get; set; }
 
         [Column]
-        public int? RoomId { get; set; }
+        public string RoomName { get; set; }
+
+        [Column]
+        public string QueueName { get; set; }
+
+        [Column]
+        public string GroupName { get; set; }
     }
 }

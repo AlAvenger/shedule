@@ -148,10 +148,17 @@
     <Compile Include="Core\Main\Concrete\School\SchoolScheduler.cs" />
     <Compile Include="Core\Main\ScheduleBase.cs" />
     <Compile Include="Core\Main\SchedulerBase.cs" />
+    <Compile Include="DataBase\DataBaseChanger.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataBase\DataBaseChanger.Designer.cs">
+      <DependentUpon>DataBaseChanger.cs</DependentUpon>
+    </Compile>
     <Compile Include="DataBase\Models\Entity.cs" />
     <Compile Include="DataBase\Models\EntityControl.cs" />
     <Compile Include="DataBase\Models\Data.cs" />
     <Compile Include="DataBase\Models\PeopleGroup.cs" />
+    <Compile Include="DataBase\Models\Queue.cs" />
     <Compile Include="DataBase\Models\Room.cs" />
     <Compile Include="DataBase\Models\Schedule.cs" />
     <Compile Include="DataBase\String\ConnectionString.cs" />
@@ -163,6 +170,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="DataBase\DataBaseChanger.resx">
+      <DependentUpon>DataBaseChanger.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

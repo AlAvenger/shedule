@@ -16,7 +16,7 @@ namespace schedule.Core.Interfaces
         /// Таблица Entity
         /// </summary>
         Table<Entity> Entity { get; set; }
-
+        Table<Schedule> Schedule { get; set; }
         /// <summary>
         /// Создание расписания, формирование в нём таблиц.
         /// </summary>
@@ -26,7 +26,7 @@ namespace schedule.Core.Interfaces
         /// <param name="room"></param>
         /// <param name="Schedule"></param>
         /// <returns></returns>
-        ISchedule CreateSchedule(Table<EntityControl> entityControl, Table<Data> data, Table<PeopleGroup> group, Table<Room> room, Table<Schedule> Schedule);
+        ISchedule CreateSchedule(Table<EntityControl> entityControl, Table<Data> data, Table<PeopleGroup> group, Table<Room> room, Table<Queue> Queue);
 
 
     }

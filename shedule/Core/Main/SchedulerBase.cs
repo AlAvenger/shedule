@@ -17,8 +17,8 @@ namespace schedule.Core.Main
     abstract class SchedulerBase : IScheduler
     {
         public Table<Entity> Entity { get; set; }
-
-        public SchedulerBase(Table<Entity> Entity)
+        public Table<Schedule> Schedule { get; set; }
+        public SchedulerBase(Table<Entity> Entity, Table<Schedule> Schedule)
         {
             if (Entity == null)
             {
@@ -27,8 +27,9 @@ namespace schedule.Core.Main
             else
             {
                 this.Entity = Entity;
+                this.Schedule = Schedule;
             }
         }
-        public abstract ISchedule CreateSchedule(Table<EntityControl> entityControl, Table<Data> data, Table<PeopleGroup> group, Table<Room> room, Table<Schedule> Schedule);
+        public abstract ISchedule CreateSchedule(Table<EntityControl> entityControl, Table<Data> data, Table<PeopleGroup> group, Table<Room> room, Table<Queue> Queue);
     }
 }

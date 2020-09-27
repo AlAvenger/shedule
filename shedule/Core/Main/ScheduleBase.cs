@@ -18,16 +18,19 @@ namespace schedule.Core.Main
         public Table<Data> Data { get; set; }
         public Table<PeopleGroup> Group { get; set; }
         public Table<Room> Room { get; set; }
-        public Table<Schedule> Schedule { get; set; }
-        public ScheduleBase(Table<EntityControl> EntityControl, Table<Data> Data, Table<PeopleGroup> Group, Table<Room> Room, Table<Schedule> Schedule)
+        public Table<Queue> Queue { get; set; }
+
+      
+        public ScheduleBase(Table<EntityControl> EntityControl, Table<Data> Data, Table<PeopleGroup> Group, Table<Room> Room, Table<Queue> Queue)
         {
             this.EntityControl = EntityControl;
             this.Data = Data;
             this.Group = Group;
             this.Room = Room;
-            this.Schedule = Schedule;
+            this.Queue = Queue;
         }
 
-        public abstract object[] ReturnSchedule();
+        public abstract object[] ReturnItems();
+        public abstract object[] ReturnSchedule(Table<Schedule> Schedule);
     }
 }

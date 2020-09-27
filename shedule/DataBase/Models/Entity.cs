@@ -6,7 +6,7 @@ namespace schedule.DataBase.Models
     public class Entity
     {
         [Column(IsDbGenerated = true, IsPrimaryKey = true)]
-        public int? EntityId { get; set; }
+        public int EntityId { get; set; }
 
         [Column]
         public string EntityName { get; set; }
